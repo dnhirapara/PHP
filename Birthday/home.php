@@ -1,10 +1,14 @@
 <?php declare(strict_types=1) ?>
 <?php 
     session_start();
-    if(isset($_GET["status"])){
-        header("location: index.php");
+    if(!isset($_SESSION["uname"])){
+        $error="Please Login to View Your Home Screen";
+        header("location: index.php?status=$error");
     }
-    $_SESSION['uname']= filter_input(INPUT_GET, "status");
+    if(!isset($_SESSION["count"])){
+        $_SESSION["count"]=0;
+    }
+//    $_SESSION['uname']= filter_input(INPUT_GET, "status");
 ?>
 <html>
     <head>
@@ -28,7 +32,9 @@
                             $_SESSION["count"]=$_SESSION["count"]+1;
                             setcookie("remname".$_SESSION["count"], $_POST["reminder_name"]);
                             setcookie("remdate".$_SESSION["count"], $_POST["bday"]);
-                            echo '<td align="center">'.$_POST["bday"].'</td>';
+//                            echo "remname".$_SESSION["count"];
+//                            echo $_COOKIE["remname1"];
+                            echo '<td align="center">'."Reminder Set".'</td>';
                         } else {
                             echo '<td align="center">'."Clean India".'</td>';
                         }

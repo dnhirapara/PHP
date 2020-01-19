@@ -1,10 +1,8 @@
 <?php
     session_start();
-    if(isset($_SESSION["uname"])){
-        header("location: index.php");
-    }
-    if(!isset($_SESSION["count"])){
-        $_SESSION["count"]=0;
+    if(!isset($_SESSION["uname"])){
+        $error="Please Login to View Your Home Screen";
+        header("location: index.php?status=$error");
     }
 ?>
 <html>
@@ -14,7 +12,7 @@
     <body>
        <?php include 'header.php';?>
         <table border="1" width="1" cellspacing="1" cellpadding="1" style="width: 25%">
-            <form name="set_reminder" action="home.php" method="POST">
+            <form name="set_reminder" action="home.php?status=set" method="POST">
             <tbody>
                 <tr>
                     <td width="40%">Name: </td>
