@@ -2,7 +2,7 @@
     $username="admin";
     $password="admin";
     if($username===$_POST["username"] && $password===$_POST["password"]){
-        $error="success";
+        $error=$_POST['username'];
         header("location: home.php?status=$error");
     }else{
         $error="Username or Password Invalid";
