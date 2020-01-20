@@ -29,8 +29,29 @@
                     <?php
                         if(isset($_POST["reminder_name"]) && isset($_POST["bday"])){
                             //setcookie("")
+                            $date1 = new DateTime("now");
+                            $date2 = new DateTime($_POST["bday"]);
+                            echo $_POST["bday"];
+                            $diff=$date2->diff($date1);
+                            $year=$diff->format('%y');
+                            $month=$diff->format('%m');
+                            $date_input1 = getDate();
+                            $temp=date_format($_POST["bday"],"Y-m-d");
+                            $time_input = strtotime($temp); 
+                            $date_input2 = getDate($time_input);
+                            if(($date_input2["year"]-$date_input1["year"]) == $year){
+                                $days=((12-$month)*30)+$diff->format('%d');
+                                echo $days;
+                            }else{
+                                $days=(($month)*30)+$diff->format('%d');
+                                echo $days;
+                            }
+                            print_r( $date1 ) ; 
+                            print_r( $date2 ) ; 
+//                            echo $date1->format('     D M Y');
+                            $days=1;
                             $_SESSION["count"]=$_SESSION["count"]+1;
-                            setcookie("remname".$_SESSION["count"], $_POST["reminder_name"]);
+                            setcookie("remname".$_SESSION["count"], $_POST["reminder_name"], time()+(86400 * $days));
                             setcookie("remdate".$_SESSION["count"], $_POST["bday"]);
 //                            echo "remname".$_SESSION["count"];
 //                            echo $_COOKIE["remname1"];
