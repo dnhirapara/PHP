@@ -15,12 +15,12 @@
             <tbody>
                 <?php
                   $curr_mon=2;
-                $curr_mon=$_COOKIE["remdate"."1"];
-                $date=date_create($curr_mon);
-                $temp=date_format($date,"Y/m/d");
-                $time_input = strtotime($temp);  
-                $date_input = getDate($time_input);
-                print_r($date_input) ;
+//                $curr_mon=$_COOKIE["remdate"."1"];
+//                $date=date_create($curr_mon);
+//                $temp=date_format($date,"Y/m/d");
+//                $time_input = strtotime($temp);  
+//                $date_input = getDate($time_input);
+//                echo $date_input['year'];
                 echo '<tr><td align="center">Next Month\'s Birthday</td> </td>';
                 for($i=1; $i<=$_SESSION["count"]; $i++){
                     $date=date_create($_COOKIE["remdate".$i]);
