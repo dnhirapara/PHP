@@ -32,7 +32,8 @@ and open the template in the editor.
                         <td><input type="reset" value="Reset" name="reset" /></td>
                     </tr>
                      <tr>
-                         <td><a href="http://192.168.29.150/web/ce049/FormDatabse/form.php">NEW USER</a></td>
+                         <!--<td><a href="http://192.168.29.150/web/ce049/FormDatabse/form.php">NEW USER</a></td>-->
+                         <td><a href="form.php">NEW USER</a></td>
                         <td></td>
                     </tr>
                 </tbody>
@@ -43,5 +44,5 @@ and open the template in the editor.
 </html>
         <?php
         
-        ?>
+?>
   
