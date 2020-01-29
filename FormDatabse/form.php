@@ -3,7 +3,7 @@
         
     </head>
     <body>
-        <form name="home" action="home.php" method="POST">
+        <form name="home" action="insert.php" method="POST">
             <table border="1" cellspacing="2" cellpadding="2">
                 
                 <tbody>
@@ -29,7 +29,7 @@
                     </tr>
                     <tr>
                         <td>Interested In:</td>
-                        <td><input type="checkbox" name="train" value="Training" required/>Training <input type="checkbox" name="place" value="Placement" />Placement</td>
+                        <td><input type="checkbox" name="train" value="interested" />Training <input type="checkbox" name="place" value="interested" />Placement</td>
                     </tr>
                     <tr>
                         <td colspan="2">Achievement: </td>

@@ -15,7 +15,7 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body><form name="LoginForm" action="form.php" method="POST">
+    <body><form name="LoginForm" action="home.php" method="POST">
             <table border="1" cellspacing="5" cellpadding="5">
                 
                 <tbody>
@@ -25,7 +25,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>Password: </td>
-                        <td><input type="password" name="Password" value="" size="50" /></td>
+                        <td><input type="password" name="password" value="" size="50" /></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="Login" name="login" /></td>

@@ -11,7 +11,7 @@ try{
         //echo print_r($r);
 //        echo $r[3];
         $date = strtotime($r[3]);
-        echo date('j F Y', $date);
+        echo date('y-f-j', $date);
         //echo date($r[3]);
 
 }
